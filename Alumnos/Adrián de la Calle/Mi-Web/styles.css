@@ -1,0 +1,78 @@
+/* Estilo naked bike: minimalista, urbano y directo al grano */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #f5f5f5;
+}
+
+header {
+  background-color: #222;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid #ff4500;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #bbb;
+}
+
+main {
+  padding: 30px;
+}
+
+section {
+  margin-bottom: 40px;
+  border-left: 4px solid #ff4500;
+  padding-left: 20px;
+}
+
+section h2 {
+  font-size: 1.8em;
+  color: #ff4500;
+  margin-bottom: 10px;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+footer {
+  background-color: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #ff4500;
+  font-size: 0.9em;
+}
+
+/* Pequeño detalle responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  section h2 {
+    font-size: 1.5em;
+  }
+}
