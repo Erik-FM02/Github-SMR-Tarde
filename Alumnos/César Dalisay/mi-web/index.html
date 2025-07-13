@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio: César Dalisay</title>
+    <link rel="stylesheet" href="pfstyles.css">
+</head>
+<body>
+    <!--Esto es la animación de carga.-->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!--Contenido principal, el div termina al final del body.-->
+    <div id="content" class="hidden">
+    <!-- Barra de navegación -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="inicio">
+        <div class="container">
+            <img src="assets/foto_perfil.jpg" alt="Foto de perfil">
+            <h1>Hola, soy César Dalisay</h1>
+            <p>Soy técnico en SMR y desarrollador web <i>junior</i> | Me encanta todo lo relacionado con la tecnología, la programación y el desarrollo web.</p>
+        </div>
+    </section>
+
+    <!-- Apartado de Sobre Mí -->
+    <section id="sobre-mi" class="sobre-mi">
+        <div class="container">
+            <h2>Acerca de Mí</h2>
+            <p>Soy un desarrollador web <i>junior</i> en este tipo de tecnologías. Pero desde la infancia aprendí las nociones de la programación y la informática en general.<br> 
+            Aprendí de forma autodidacta y en mi ciclo de formación las tecnologías de <i>HTML, CSS y JavaScript</i>. También he realizado cursos IT en varias plataformas 
+            (<i>OpenWebinars o Udemy</i>) para mejorar mi dominio en el desarrollo web.<br>
+            Actualmente estoy perfeccionando mi soltura para conseguir un nivel apto para un entorno laboral. Mi plan de formación a medio y largo plazo, pasa por 
+            aprender nuevas habilidades para perfiles tipo Front-end, Back-end y Full Stack developer. Así como aprender a usar tecnologías tipo
+             <i>Angular, React, Docker, PHP o SQL</i>, lenguajes de programación como <i>Python y Java</i>, entre otros.</p>  
+                    
+        </div>
+    </section>
+
+    <!-- Apartado de Proyectos -->
+    <section id="proyectos" class="proyectos">
+        <div class="container">
+            <h2>Mis Proyectos</h2>
+            <div class="proyectos-grid">
+                <div class="proyecto">
+                    <img src="assets/P1DigitalClock.png" alt="Proyecto 1">
+                    <h3>Reloj digital (básico).</h3>
+                    <p>Mi primer proyecto usando <i>HTML, CSS y JavaScript</i> fue diseñar y programar un reloj digital. En este proyecto mejoré mi soltura a la hora de usar <i>HTML</i>, 
+                    <i>CSS</i> y <i>JavaScript</i> para conseguir un reloj totalmente funcional con hora local de España.</p>
+                </div>
+                <div class="proyecto">
+                    <img src="assets/BMSProject.png" alt="Proyecto 2">
+                    <h3>Buscador de películas y series.</h3>
+                    <p>Este fue mi segundo proyecto, en la que diseño un buscador de películas y series. La versión inicial solo consistia en usar la API de OMBD y poder hacer búsquedas. 
+                    En versiones posteriores tengo pensado añadir más funciones. Por ejemplo: acceder a la ficha de la película seleccionada o mejoras de diseño.</p>
+                </div>
+                <div class="proyecto">
+                    <img src="assets/foto-proyecto.png" alt="Proyecto 3">
+                    <h3>Proyecto 3</h3>
+                    <p>Detalles del próximo proyecto...</p>
+                </div>
+                <!-- Agregar más proyectos aquí con divs -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Apartado de Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form id="formulario-contacto" action="https://formsubmit.co/cesartrbj@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <textarea name="message" placeholder="Mensaje" required></textarea>
+                <button type="submit" name="submit">Enviar</button>
+             </form>
+        </div>
+    </section>
+    </main>
+    
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 César Dalisay. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    </div>
+
+    <script src="pfscript.js"></script>
+</body>
+</html>
