@@ -7,3 +7,5 @@ Este repositorio contiene ejercicios y recursos para trabajar con **diferentes t
 -  **DevOps**: Docker, despliegue, automatización, monitorización
 -  **Ciberseguridad**: Análisis de red, escaneo
 -  **Diseño Frontend**: HTML, CSS, JavaScript y conceptos visuales
+
+* Las prácticas realizas por el alumno serán guardas en la carpeta con su nombre.

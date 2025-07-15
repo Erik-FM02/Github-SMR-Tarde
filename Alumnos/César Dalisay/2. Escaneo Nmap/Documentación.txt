@@ -1,0 +1,57 @@
+### Documentación del segundo ejecicio de prácticas usando Nmap. ###
+
+## 1. Comprobaremos que el contenedor está iniciado. ##
+
+- Para ello crearemos el contenedor yendo al directorio donde están los archivos
+y usaremos el comando "docker build -t [nombre_contenedor] ."
+
+- Después lo iniciaremos con el comando "docker run -d -p 8080:80 --name [nombre_contenedor]".
+
+- Para finalizar, pondremos en el navegador "http://localhost:8080" para ver si funciona el contenedor (captura 1).
+
+## 2. Escaneado del contenedor con Nmap. ##
+
+- Para escanear el contenedor primero debemos saber su IP, usaremos el comando "ip a" en nuestra terminal (captura 2).
+
+- Ahora usaremos el comando "nmap 172.17.1.0" (captura 3).
+
+- El resultado del escaneo dice que hay un servicio HTTP/HTTP-proxy abierto en el puerto 8080 (captura 3).
+
+- El puerto detectado es el 8080 e indica que está abierto (captura 3).
+
+## 3. Escaneado con detección de servicios. ##
+
+- Para hacer un escaneado con detección de servicios usaremos el comando "nmap -sV -p 8080 172.17.0.1" (captura 4).
+
+- Los datos adicionas que nos da este comando son, el servicio web usado en este caso Nginx 1.29 y que hay un servicio web
+HTTP abierto usando el puerto 8080 (captura 4).
+
+- A priori el contenido del contenedor de Docker no debería ser visible desde fuera, ya que se está ejecutando de forma 
+local ya que usa una IP interna. Podría ser un riesgo de seguridad si hay brechas en la versión de Nginx. Podemos comprobar
+si podemos acceder al contenedor Docker desde otro dispositivo, que en este caso no debería deja (captura 5).
+
+## 4. Escaneado con el contenedor detenido. ##
+
+- Para detener el contenedor docker usaremos el comando "docker stop [ID del contenedor]", podemos averiguar la ID del 
+contenedor Docker usando el comando "docker ps -a" (captura 6).
+
+- Volvemos a ejecutar "nmap 172.17.1.0" y veremos que el resultado ha cambiado, ya que ahora tenemos el contenedor
+Docker detenido.
+
+- El resultado actual dice que tenemos Docker activo, pero ahora resulta que todos los puertos están cerrados. Esto es debido 
+a que cuando un contenedor Docker se detiene, los puertos usados se cierran (captura 7).
+
+## 5. Importancia de la visibilidad de los servicios en una red y su impacto en la 
+seguridad. ##
+
+- La visibilidad de los servicios es el primer paso a la prevención. Todo servicio expuesto en la red, puede ser usado para atacar
+la red. Si un servicio es público y no está protegido es posible que los atacantes aprovechen esa brecha de seguridad. 
+
+- Al no monitorizar los servicios, es posible que tengamos servicios olvidados que se ejecutan sin supervisión o peor, que sean
+una brecha para un posible ataque a la red.
+
+- Una red interna no quiere decir que sea una red segura, si un atacante tiene acceso a nuestra red, tendrá acceso a toda la 
+información o dejarla inutilizada.
+
+- Hacer buenas prácticas, debemos tener una configuración de reglas, mapeo de puertos y actualizaciones periódicas para 
+tener la red segura.
