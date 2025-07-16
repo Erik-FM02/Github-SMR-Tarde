@@ -1,0 +1,19 @@
+# Reflexión sobre escaneo y visibilidad de servicios
+
+✅ ¿Qué puerto fue detectado?
+El puerto 8080 fue detectado como abierto cuando el contenedor estaba funcionando.
+
+✅ ¿Qué servicio/version se mostró?
+Nmap detectó que se estaba ejecutando el servicio NGINX, versión 1.25.3.
+
+✅ ¿Es seguro que esta información sea visible desde fuera?
+No es recomendable. Mostrar la versión del software puede exponer posibles vulnerabilidades conocidas de esa versión.
+
+✅ ¿Qué cambia al detener el contenedor?
+Cuando el contenedor está detenido, el puerto 8080 ya no aparece como abierto. Nmap lo marca como cerrado.
+
+✅ ¿Por qué ocurre ese cambio?
+Porque el contenedor que gestionaba el puerto ha sido detenido, por lo tanto Docker ya no está escuchando en ese puerto.
+
+✅ Reflexión final:
+Es muy importante limitar la exposición de servicios en red. Cada puerto abierto puede ser una puerta de entrada para un atacante. Debemos proteger los servicios y ocultar versiones sensibles para mantener un entorno más seguro.
