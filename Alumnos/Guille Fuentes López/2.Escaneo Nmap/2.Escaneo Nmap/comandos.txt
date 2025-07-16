@@ -1,0 +1,10 @@
+# Comandos usados para el escaneo con Nmap
+
+1. Escaneo básico:
+nmap -p 8080 localhost
+
+2. Escaneo con detección de servicios:
+nmap -sV -p 8080 localhost
+
+3. Escaneo después de parar el contenedor:
+nmap -p 8080 localhost
