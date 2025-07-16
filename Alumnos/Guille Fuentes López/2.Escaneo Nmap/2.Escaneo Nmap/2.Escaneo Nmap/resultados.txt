@@ -1,0 +1,22 @@
+# Resultados del escaneo con Nmap
+
+🔍 Escaneo con contenedor funcionando:
+Comando: nmap -p 8080 localhost
+
+Resultado:
+PORT     STATE SERVICE
+8080/tcp open  http-proxy
+
+🔍 Escaneo con detección de servicios:
+Comando: nmap -sV -p 8080 localhost
+
+Resultado:
+PORT     STATE SERVICE VERSION
+8080/tcp open  http    nginx 1.25.3
+
+🔍 Escaneo con el contenedor detenido:
+Comando: nmap -p 8080 localhost
+
+Resultado:
+PORT     STATE  SERVICE
+8080/tcp closed http-proxy
