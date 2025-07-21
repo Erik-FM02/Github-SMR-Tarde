@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Página Estática</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Bienvenido a Mi Sitio</h1>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <h2>Construyendo con Docker</h2>
+      <p>Esta página está desplegada en un contenedor NGINX.</p>
+    </section>
+
+    <section id="about" class="content">
+      <h2>Sobre el ejercicio</h2>
+      <p>El objetivo de este ejercicio es crear una imagen Docker que sirva este HTML y CSS de manera estática usando NGINX.</p>
+    </section>
+
+    <section id="projects" class="content">
+      <h2>Proyectos</h2>
+      <ul>
+        <li>Ejercicio de páginas estáticas</li>
+        <li>Configuración de Dockerfile</li>
+        <li>Despliegue automático</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="content">
+      <h2>Contacto</h2>
+      <p>Puedes enviarme un correo a <a href="mailto:interno@example.com">interno@example.com</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 - Prácticas de Docker</p>
+  </footer>
+</body>
+</html>
